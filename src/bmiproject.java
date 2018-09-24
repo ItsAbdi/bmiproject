@@ -1,4 +1,3 @@
-import java.text.MessageFormat;
 import java.util.Scanner;
 
 public class bmiproject {
@@ -11,49 +10,33 @@ public class bmiproject {
     }
     public static String message(double BMI) {
         if (BMI < 730) {
-            return "you are to fat";
-        } else if (BMI < 15) {
-            return "you need to eat more!";
-        } else {
-            return "you BMI is perfect";
-        }
+            return " you are to fat";
+        } if (BMI < 15) {
+            return " you need to eat more!";
+        } else return " your BMI is perfect";
     }
 
     public static void main (String [] args) {
         //declare
         Scanner keyboard = new Scanner(System.in);
         System.out.println("what is your height in inches?");
-        int height= keyboard.nextInt();
+        int height = keyboard.nextInt();
         System.out.println("what is your weight in pounds?");
-        int weight= keyboard.nextInt();
+        int weight = keyboard.nextInt();
         double BMI;
-        BMI = calculate(weight,height);
+        BMI = calculate(weight, height);
+        String output = BMI + "" + message(BMI);
+        System.out.println(output);
+    }
 
 
-//        //initialize
-//        keyboard= new Scanner(System.in);
 //
-//
-//        System.out.println("Hello my name is Abdi, what is yours?");
-//        name=keyboard.nextLine();
-//        System.out.println("what is your height in feet?");
-//        feet= keyboard.nextInt();
-//        System.out.println("what is your height in inches?");
-//        inch=keyboard.nextInt();
-//        System.out.println("what is your weight in pounds");
-//        weight= keyboard.nextInt();
-//
-//
-//        inch= inch + (feet*12);
-//        meter =  (inch * 0.0254);
-//        kg= keyboard.nextInt();
-
 
 
 
             }
 
-        }
+
 
 
 
